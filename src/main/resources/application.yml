@@ -1,0 +1,35 @@
+# ServerProperties
+server:
+  port: 8080
+  servlet:
+    context-path: /community
+# DataSourceProperties
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/community?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      idle-timeout: 30000
+  # ThymeleafProperties
+  thymeleaf:
+    cache: false
+# MybatisProperties
+mybatis:
+  mapper-locations:  mapper/*.xml
+  type-aliases-package: com.chen.community.entity
+  configuration:
+    useGeneratedKeys: true
+    map-underscore-to-camel-case: true
+# logger
+#logging:
+#  level:
+#    com:
+#      chen:
+#        community: debug
+#  pattern:
+#    console: "[%thread] %-5level %logger{36} -%msg%n"
