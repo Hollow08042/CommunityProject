@@ -18,6 +18,32 @@ spring:
   # ThymeleafProperties
   thymeleaf:
     cache: false
+#  MailProperties
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1172029461@qq.com
+    password: vvvgbupraosnbafb
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: test-consumer-group
+      enable-auto-commit: true
+      auto-commit-interval: 3000
+  data:
+    elasticsearch:
+      cluster-name: chen
+      cluster-nodes: 127.0.0.1:9300
 # MybatisProperties
 mybatis:
   mapper-locations:  mapper/*.xml
@@ -25,7 +51,7 @@ mybatis:
   configuration:
     useGeneratedKeys: true
     map-underscore-to-camel-case: true
-# logger
+ #logger
 #logging:
 #  level:
 #    com:
@@ -33,3 +59,8 @@ mybatis:
 #        community: debug
 #  pattern:
 #    console: "[%thread] %-5level %logger{36} -%msg%n"
+#community
+community:
+  path:
+    domain: http://localhost:8080
+    upload: d:/StudyMaterials/A-JavaLearn/B-project/upload

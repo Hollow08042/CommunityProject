@@ -22,5 +22,14 @@ public interface DiscussPostMapper {
     //这里userId可有可无，是变量
     //查帖子的总数
     int selectDiscussPostRows(@Param("userId") int userId);
+
+    //插入帖子
+    int insertDiscussPost(DiscussPost discussPost);
+
+    //查询帖子详情
+    DiscussPost selectDiscussPostById(Integer id);
+
+    //更新帖子评论的数量
+    int updateCommentCount(Integer id,Integer commentCount);
 }
 

@@ -74,9 +74,9 @@ public class Page {
     /**
      * 获取起始页码
      */
-    public int getForm(){
-        int form = current - 2;
-        return form < 1 ? 1 : form;
+    public int getFrom(){
+        int from = current - 2;
+        return from < 1 ? 1 : from;
     }
 
     /**
